@@ -3,6 +3,9 @@
   --promo-color-black: #000
   --promo-color-pink: #E904F5
   --promo-color-gray: #E3E3E3
+  --promo-color-blue: rgba(0, 198, 255, 1)
+  --promo-color-magenta: #FF267E
+  --promo-color-purple: rgb(40, 3, 120)
   --promo-color-white: #FFFFFF
   --promo-colo-orange: #BB8531
   --promo-colo-orange-two: #E18A03
@@ -132,6 +135,7 @@ body
       z-index: 5
       margin: -80px 0 0 0
       max-width: 750px
+      animation: 2s shadowMagenta ease infinite
     &-bg
       position: absolute
       width: 100%
@@ -168,6 +172,8 @@ body
       position: relative
       z-index: 5
       max-width: 910px
+      img
+        animation: 4s shadowPurple ease infinite
       &-text
         padding: 0 40px 49px
         display: flex
@@ -227,6 +233,7 @@ body
       text-shadow: var(--promo-shadow-blue-text)
       font-family: $font-gawaa
     &-bottom
+      animation: 3s decOne ease infinite
       width: 483px
       height: 110px
       margin: -14px 0 -10px -25px
@@ -259,8 +266,10 @@ body
     font-size: 17px
     line-height: 30px
     &:first-child::before
+      animation: 2s decOne ease infinite
       background: url("../img/detail/icon1.svg") no-repeat 0 0/contain
     &:last-child::before
+      animation: 1.5s decOne ease infinite
       background: url("../img/detail/icon2.svg") no-repeat 0 0/contain
     &::before
       content: ''
@@ -336,6 +345,7 @@ body
         position: absolute
         width: 115px
         height: 90px
+        animation: 1s shadowBlue ease infinite
         background: url("../img/prize/arrow.svg") no-repeat 0 0/contain
     .titleTwo
       position: relative
@@ -388,6 +398,10 @@ body
       align-items: center
       justify-content: center
       gap: 12px
+      .play
+        animation: 2s decOne ease infinite
+        &:hover
+          animation-play-state: paused
       .left,
       .right
         width: 55px
@@ -501,6 +515,10 @@ body
   &__row
     margin: -100px 0 60px 0
     display: flex
+  &__link
+    animation: 2s decOne ease infinite
+    &:hover
+      animation-play-state: paused
   &__item
     display: flex
     flex-direction: column
@@ -526,49 +544,48 @@ body
         text-decoration: none
 
 
-
 .hidden
   opacity: 0 !important
   transform: scale(1) !important
 
 
-@keyframes animArrow
-  0%
-    transform: translateX(-5px)
-  50%
-    transform: translateX(5px)
-  100%
-    transform: translateX(-5px)
-
-@keyframes snowAnimation
-  0%
-    background-position: 0 0
-  100%
-    background-position: 0 100%
-
 @keyframes shadowMagenta
   0%
     filter: drop-shadow(0px 0px 0px var(--promo-color-magenta))
   50%
-    filter: drop-shadow(0px 0px 15px var(--promo-color-magenta))
+    filter: drop-shadow(0px 0px 8px var(--promo-color-magenta))
   100%
     filter: drop-shadow(0px 0px 0px var(--promo-color-magenta))
 
-@keyframes shadowWhite
+@keyframes shadowPurple
   0%
-    filter: drop-shadow(0px 0px 3px var(--promo-color-white))
+    filter: drop-shadow(0px 0px 0px var(--promo-color-purple))
+    transform: scale(1)
   50%
-    filter: drop-shadow(0px 0px 17px var(--promo-color-white))
+    filter: drop-shadow(0px 0px 20px var(--promo-color-purple))
+    transform: scale(1.02)
   100%
-    filter: drop-shadow(0px 0px 3px var(--promo-color-white))
+    filter: drop-shadow(0px 0px 0px var(--promo-color-purple))
+    transform: scale(1)
+
+@keyframes shadowBlue
+  0%
+    filter: drop-shadow(0px 0px 3px var(--promo-color-blue))
+  50%
+    filter: drop-shadow(0px 0px 17px var(--promo-color-blue))
+  100%
+    filter: drop-shadow(0px 0px 3px var(--promo-color-blue))
+
 
 @keyframes decOne
   0%
-    transform: rotate(0deg) scale(1)
+    transform: scale(1)
   50%
-    transform: rotate(4deg) scale(1.05)
+    transform: scale(1.05)
   100%
-    transform: rotate(0deg) scale(1)
+    transform: scale(1)
+
+
 
 @keyframes decTwo
   0%
