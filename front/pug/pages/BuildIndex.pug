@@ -1,177 +1,169 @@
-.fav__page#newYear2024
+.fav__page.overflow
   .welcome
     .welcome__container
-      .welcome__pers
-        picture
-          source(media="(min-width: 1025px) " srcset="https://fav-prom.com/html/ny-ro/img/welcome/pers-desc.png")
-          source(media="(min-width: 551px) and (max-width: 1024px) " srcset="https://fav-prom.com/html/ny-ro/img/welcome/pers-tab.png")
-          source(media="(max-width: 550px)" srcset="https://fav-prom.com/html/ny-ro/img/welcome/pers-mob.png")
-          img(src="https://fav-prom.com/html/ny-ro/img/welcome/pers-desc.png" alt="Favbet")
-      .welcome__present
-        picture
-          source(media="(min-width: 1025px) " srcset="https://fav-prom.com/html/ny-ro/img/welcome/present-desc.png")
-          source(media="(min-width: 551px) and (max-width: 1024px) " srcset="https://fav-prom.com/html/ny-ro/img/welcome/present-tab.png")
-          source(media="(max-width: 550px)" srcset="https://fav-prom.com/html/ny-ro/img/welcome/present-mob.png")
-          img(src="https://fav-prom.com/html/ny-ro/img/welcome/present-desc.png" alt="Favbet")
-      .welcome__text
-        .welcome__text-top(data-translate='welcome-title-top')
-        .welcome__text-bottom(data-translate='welcome-title-bottom')
-  .detail
-    .detail__container
-      .detail__decor-one
-      .detail__title(data-translate='detail-title')
-      .detail__text(data-translate='detail-text')
-      a(href="/login/" target="_blank" role="button" data-translate='loginBtn').detail__btn.custom-btn.unauth-msg
-      .detail__btn.btn-join.custom-btn.hide(data-translate='partBtn')
-      a(href='/sports/sport/soccer/' target="_blank" role="button" data-translate='playBtn').detail__btn.custom-btn.took-part.hide
-      .detail__decor-two
-  .prize
-    .prize__container
-      .prize__title(data-translate='prize-title')
-      .prize__row
-        .prize__item
-          .prize__item-img
-            picture
-              source(media="(min-width: 551px) " srcset="https://fav-prom.com/html/ny-ro/img/prize/prize1-desc.png")
-              source(media="(max-width: 550px)" srcset="https://fav-prom.com/html/ny-ro/img/prize/prize1-mob.png")
-              img(src="https://fav-prom.com/html/ny-ro/img/prize/prize1-desc.png" alt="Favbet")
-          .prize__item-text(data-translate='prize_1')
-        .prize__item
-          .prize__item-img
-            picture
-              source(media="(min-width: 551px) " srcset="https://fav-prom.com/html/ny-ro/img/prize/prize2-desc.png")
-              source(media="(max-width: 550px)" srcset="https://fav-prom.com/html/ny-ro/img/prize/prize2-mob.png")
-              img(src="https://fav-prom.com/html/ny-ro/img/prize/prize2-desc.png" alt="Favbet")
-          .prize__item-text(data-translate='prize_2')
-        .prize__item
-          .prize__item-img
-            picture
-              source(media="(min-width: 551px) " srcset="https://fav-prom.com/html/ny-ro/img/prize/prize3-desc.png")
-              source(media="(max-width: 550px)" srcset="https://fav-prom.com/html/ny-ro/img/prize/prize3-mob.png")
-              img(src="https://fav-prom.com/html/ny-ro/img/prize/prize3-desc.png" alt="Favbet")
-          .prize__item-text(data-translate='prize_3')
-        .prize__item
-          .prize__item-img
-            picture
-              source(media="(min-width: 551px) " srcset="https://fav-prom.com/html/ny-ro/img/prize/prize4-desc.png")
-              source(media="(max-width: 550px)" srcset="https://fav-prom.com/html/ny-ro/img/prize/prize4-mob.png")
-              img(src="https://fav-prom.com/html/ny-ro/img/prize/prize4-desc.png" alt="Favbet")
-          .prize__item-text(data-translate='prize_4')
-        .prize__item
-          .prize__item-img
-            picture
-              source(media="(min-width: 551px) " srcset="https://fav-prom.com/html/ny-ro/img/prize/prize5-desc.png")
-              source(media="(max-width: 550px)" srcset="https://fav-prom.com/html/ny-ro/img/prize/prize5-mob.png")
-              img(src="https://fav-prom.com/html/ny-ro/img/prize/prize5-desc.png" alt="Favbet")
-          .prize__item-text(data-translate='prize_5')
-        .prize__item
-          .prize__item-img
-            picture
-              source(media="(min-width: 551px) " srcset="https://fav-prom.com/html/ny-ro/img/prize/prize6-desc.png")
-              source(media="(max-width: 550px)" srcset="https://fav-prom.com/html/ny-ro/img/prize/prize6-mob.png")
-              img(src="https://fav-prom.com/html/ny-ro/img/prize/prize6-desc.png" alt="Favbet")
-          .prize__item-text(data-translate='prize_6')
-        .prize__item
-          .prize__item-img
-            picture
-              source(media="(min-width: 551px) " srcset="https://fav-prom.com/html/ny-ro/img/prize/prize7-desc.png")
-              source(media="(max-width: 550px)" srcset="https://fav-prom.com/html/ny-ro/img/prize/prize7-mob.png")
-              img(src="https://fav-prom.com/html/ny-ro/img/prize/prize7-desc.png" alt="Favbet")
-          .prize__item-text(data-translate='prize_7')
-  .info
-    .info__container
-      .info__prize-left
-      .info__title(data-translate='info-title')
-      a(href="/login/" target="_blank" role="button" data-translate='loginBtn').info__btn.custom-btn.unauth-msg
-      .info__btn.custom-btn.btn-join.hide(data-translate='partBtn')
-      a(href='/sports/sport/soccer/' target="_blank" role="button" data-translate='playBtn').info__btn.custom-btn.took-part.hide
-      .info__prize-right
-  .rules
-    .rules__container
-      .rules__title(data-translate='rules-title')
-      .rules__list
-        .rules__item.rules__item-one
-          .rules__item-img
-            picture
-              source(media="(min-width: 551px) " srcset="https://fav-prom.com/html/ny-ro/img/rules/rules-img1-desc.png")
-              source(media="(max-width: 550px)" srcset="https://fav-prom.com/html/ny-ro/img/rules/rules-img1-mob.png")
-              img(src="https://fav-prom.com/html/ny-ro/img/rules/rules-img1-desc.png" alt="Favbet")
-          .rules__item-text(data-translate='rules-txt-1')
-        .rules__item.rules__item-two
-          .rules__item-img
-            picture
-              source(media="(min-width: 551px) " srcset="https://fav-prom.com/html/ny-ro/img/rules/rules-img2-desc.png")
-              source(media="(max-width: 550px)" srcset="https://fav-prom.com/html/ny-ro/img/rules/rules-img2-mob.png")
-              img(src="https://fav-prom.com/html/ny-ro/img/rules/rules-img2-desc.png" alt="Favbet")
-          .rules__item-text(data-translate='rules-txt-2')
-        .rules__item.rules__item-three
-          .rules__item-img
-            picture
-              source(media="(min-width: 551px) " srcset="https://fav-prom.com/html/ny-ro/img/rules/rules-img3-desc.png")
-              source(media="(max-width: 550px)" srcset="https://fav-prom.com/html/ny-ro/img/rules/rules-img3-mob.png")
-              img(src="https://fav-prom.com/html/ny-ro/img/rules/rules-img3-desc.png" alt="Favbet")
-          .rules__item-text(data-translate='rules-txt-3')
+      .welcome__image
+        .welcome__image-bg
+        .welcome__image-title
+          picture
+            source(media="(min-width: 1025px) " srcset="img/welcome/welcome-title-desc.png")
+            source(media="(min-width: 551px) and (max-width: 1024px) " srcset="img/welcome/welcome-title-tab.png")
+            source(media="(max-width: 550px)" srcset="img/welcome/welcome-title-mob.png")
+            img(src="img/welcome/welcome-title-desc.png" alt="Favbet")
+        .welcome__image-pers
+          picture
+            source(media="(min-width: 1025px) " srcset="img/welcome/welcome-sam-desc.png")
+            source(media="(min-width: 551px) and (max-width: 1024px) " srcset="img/welcome/welcome-sam-tab.png")
+            source(media="(max-width: 550px)" srcset="img/welcome/welcome-sam-mob.png")
+            img(src="img/welcome/welcome-sam-desc.png" alt="Favbet")
+          .welcome__image-pers-text Граю-вітаю! #[br] Готовий поборотись за мільйон?
+        .welcome__image-left
+        .welcome__image-right
 
-      details.custom-drop.rules__drop
-        summary.custom-drop-title(data-translate="rulesDropTitle")
-        .custom-drop-txt
-          .custom-drop-txt-wrap(data-translate="rulesDropTxt")
-  .result
-    .result__bg
-    .result__container
-      .result__title(data-translate='result-title')
-      .result__row
-        .result__item
-          .result__item-title(data-translate='resul-table1-title')
-          .tableResults
-            .tableResults__container
-              .tableResults__wrap
-                .tableResults__head
-                  .tableResults__head-list
-                    .tableResults__head-col(data-translate="tableResults_head-place")
-                    .tableResults__head-col(data-translate="tableResults_head-id")
-                    .tableResults__head-col(data-translate="tableResults_head-points")
-                    .tableResults__head-col(data-translate="tableResults_head-prize")
-                .tableResults__body#results-table-one
-        .result__item
-          .result__item-title(data-translate='resul-table2-title')
-          .tableResults
-            .tableResults__container
-              .tableResults__wrap
-                .tableResults__head
-                  .tableResults__head-list
-                    .tableResults__head-col(data-translate="tableResults_head-place")
-                    .tableResults__head-col(data-translate="tableResults_head-id")
-                    .tableResults__head-col(data-translate="tableResults_head-points")
-                    .tableResults__head-col(data-translate="tableResults_head-prize")
-                .tableResults__body#results-table-two
-      details.custom-drop.result__drop
-        summary.custom-drop-title(data-translate="resultDropTitle")
-        .custom-drop-txt
-          .custom-drop-txt-wrap(data-translate="resultDropTxt")
-  .video
-    .video__container
-      .video__prize-left
-      .video__title Raport video
-      .video__img
-        iframe(src="https://www.youtube.com/embed/Cd2oYD49NeY?si=yqtQ4J_Y0TYWBSTj" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video-frame")
-      .video__prize-right
-  .footer
-    .footer__container
-      .footer__pers
-        picture
-          source(media="(min-width: 1025px) " srcset="https://fav-prom.com/html/ny-ro/img/welcome/pers-desc.png")
-          source(media="(min-width: 771px) and (max-width: 1024px) " srcset="https://fav-prom.com/html/ny-ro/img/welcome/pers-tab.png")
-          source(media="(max-width: 700px)" srcset="https://fav-prom.com/html/ny-ro/img/welcome/present-mob.png")
-          img(src="https://fav-prom.com/html/ny-ro/img/welcome/pers-desc.png" alt="Favbet")
-      .footer__wrap
-        .footer__text
-          .footer__text-top(data-translate='footer-title-top')
-          .footer__text-bottom(data-translate='footer-title-bottom')
-        a(href="/login/" target="_blank" role="button" data-translate='loginBtn').footer__btn.custom-btn.unauth-msg
-        .footer__btn.custom-btn.btn-join.hide(data-translate='partBtn')
-        a(href='/sports/sport/soccer/' target="_blank" role="button" data-translate='playBtn').footer__btn.custom-btn.took-part.hide
-
+      .welcome__text *Джекпот - це виграш (приз), який визначається Організатором залежно від загальної кількості здійснених гравцями ставок. Приз можливо виграти, граючи в іграх розділу Казино, Швидкі Ігри та Казино Live. Загальна сума призового фонду джекпоту постійно зростає, так само, як і окремі види призів (Mini, Minor, Major, Mega). Деталі на акційній сторінці або в п.6.9 правил Організатора <a href='https://www.favbet.ua/uk/rules/'>https://www.favbet.ua/uk/rules/</a>
+  .wrapper-bg
+    .detail
+      .detail__container
+        .detail__row
+          .detail__info
+            .detail__title
+              .detail__title-top Зривай джекпот
+              .detail__title-bottom
+            .detail__text Грай у розділах Казино, Швидкі Ігри та Казино Live, став від 1 гривні та отримуй можливість забрати джекпот від FAVBET
+            .detail__subtitle Як працює FAVBET Джекпот?
+            .detail__list
+              .detail__item Роби ставки в будь-яких іграх у розділі Казино, Швидкі ігри та Казино Live.
+              .detail__item Сума джекпоту залежить від вартості ставки. Джекпот не вимагає відіграшу.
+          .detail__image
+            picture
+              source(media="(min-width: 1025px) " srcset="img/detail/sam-detail-desc.png")
+              source(media="(min-width: 551px) and (max-width: 1024px) " srcset="img/detail/sam-detail-tab.png")
+              source(media="(max-width: 550px)" srcset="img/detail/sam-detail-mob.png")
+              img(src="img/detail/sam-detail-desc.png" alt="Favbet")
+            .detail__image-text Саме так: #[br] стартуй від 1 гривні та змагайся за свій джекпот
+    .prize
+      .prize__container
+        .prize__slider
+          .prize__item.item1
+            .prize__item-wrap
+              .prize__item-info
+                .prize__item-title.titleOne
+                  picture
+                    source(media="(min-width: 551px) " srcset="img/prize/title-slide1-desc.png")
+                    source(media="(max-width: 550px)" srcset="img/prize/title-slide1-mob.png")
+                    img(src="img/prize/title-slide1-desc.png" alt="Favbet")
+                .prize__item-sum 1500000₴
+                .prize__item-wrap
+                  .left.button-slider-left
+                  a(href='#').play.custom-btn Грати
+                  .right.button-slider-right
+                .prize__item-cont
+                  .prize__item-text Мінімальна ставка
+                  .prize__item-stav 1 ₴
+              picture
+                source(media="(min-width: 1025px) " srcset="img/prize/slot-desc.png")
+                source(media="(min-width: 551px) and (max-width: 1024px) " srcset="img/prize/slot-tab.png")
+                source(media="(max-width: 550px)" srcset="img/prize/slot-mob.png")
+                img(src="img/prize/slot-desc.png" alt="Favbet")
+          .prize__item.item2
+            .prize__item-wrap
+              .prize__item-info
+                .prize__item-title.titleTwo
+                  picture
+                    source(media="(min-width: 551px) " srcset="img/prize/title-slide2-desc.png")
+                    source(media="(max-width: 550px)" srcset="img/prize/title-slide2-mob.png")
+                    img(src="img/prize/title-slide2-desc.png" alt="Favbet")
+                .prize__item-sum 1500000₴
+                .prize__item-wrap
+                  .left.button-slider-left
+                  a(href='#').play.custom-btn Грати
+                  .right.button-slider-right
+                .prize__item-cont
+                  .prize__item-text Мінімальна ставка
+                  .prize__item-stav 50 ₴
+              picture
+                source(media="(min-width: 1025px) " srcset="img/prize/slot-desc.png")
+                source(media="(min-width: 551px) and (max-width: 1024px) " srcset="img/prize/slot-tab.png")
+                source(media="(max-width: 550px)" srcset="img/prize/slot-mob.png")
+                img(src="img/prize/slot-desc.png" alt="Favbet")
+          .prize__item.item3
+            .prize__item-info
+              .prize__item-title.titleThree
+                picture
+                  source(media="(min-width: 551px) " srcset="img/prize/title-slide3-desc.png")
+                  source(media="(max-width: 550px)" srcset="img/prize/title-slide3-mob.png")
+                  img(src="img/prize/title-slide1-desc.png" alt="Favbet")
+              .prize__item-sum 1500000₴
+              .prize__item-wrap
+                .left.button-slider-left
+                a(href='#').play.custom-btn Грати
+                .right.button-slider-right
+              .prize__item-cont
+                .prize__item-text Мінімальна ставка
+                .prize__item-stav 10 ₴
+            .prize__item-wrap
+              picture
+                source(media="(min-width: 1025px) " srcset="img/prize/slot-desc.png")
+                source(media="(min-width: 551px) and (max-width: 1024px) " srcset="img/prize/slot-tab.png")
+                source(media="(max-width: 550px)" srcset="img/prize/slot-mob.png")
+                img(src="img/prize/slot-desc.png" alt="Favbet")
+          .prize__item.item4
+            .prize__item-info
+              .prize__item-title.titleOne
+                picture
+                  source(media="(min-width: 551px) " srcset="img/prize/title-slide1-desc.png")
+                  source(media="(max-width: 550px)" srcset="img/prize/title-slide1-mob.png")
+                  img(src="img/prize/title-slide1-desc.png" alt="Favbet")
+              .prize__item-sum 1500000₴
+              .prize__item-wrap
+                .left.button-slider-left
+                a(href='#').play.custom-btn Грати
+                .right.button-slider-right
+              .prize__item-cont
+                .prize__item-text Мінімальна ставка
+                .prize__item-stav 1 ₴
+            .prize__item-wrap
+              picture
+                source(media="(min-width: 1025px) " srcset="img/prize/slot-desc.png")
+                source(media="(min-width: 551px) and (max-width: 1024px) " srcset="img/prize/slot-tab.png")
+                source(media="(max-width: 550px)" srcset="img/prize/slot-mob.png")
+                img(src="img/prize/slot-desc.png" alt="Favbet")
+    .info
+      .info__container
+        .info__row
+          .info__image
+            picture
+              source(media="(min-width: 1025px) " srcset="img/info/sam-info-desc.png")
+              source(media="(min-width: 551px) and (max-width: 1024px) " srcset="img/info/sam-info-tab.png")
+              source(media="(max-width: 550px)" srcset="img/info/sam-info-mob.png")
+              img(src="img/info/sam-info-desc.png" alt="Favbet")
+            .info__image-text Ого, який джекпот! Не проґав свій шанс
+          .info__des
+            .info__title Кожна ставка у розділі Казино та Казино Live збільшує суму джекпоту.
+            .info__text
+              p Виграш джекпоту повністю випадковий.
+              p У разі виграшу джекпоту необхідно зайти в Особистий Кабінет -> Бонуси -> Джекпоти та прийняти виграш протягом 5 (п’яти) календарних днів з моменту отримання сповіщення.
+              p Після чого сума такого виграшу (призу) буде зарахована на особистий клієнтський рахунок Гравця.
+    .footer
+      .footer__container
+        .footer__title Твоя ставка — твій шанс на джекпот.
+        .footer__row
+          .footer__item
+            .footer__image.footer__image-one
+              picture
+                source(media="(min-width: 1025px) " srcset="img/footer/sam-footer-desc.png")
+                source(media="(min-width: 551px) and (max-width: 1024px) " srcset="img/footer/sam-footer-tab.png")
+                source(media="(max-width: 550px)" srcset="img/footer/sam-footer-mob.png")
+                img(src="img/footer/sam-footer-desc.png" alt="Favbet")
+            a(href='#').footer__link.custom-btn-two крутити рулетку
+          .footer__item
+            .footer__image.footer__image-two
+              picture
+                source(media="(min-width: 1025px) " srcset="img/footer/footer-avt-desc.png")
+                source(media="(min-width: 551px) and (max-width: 1024px) " srcset="img/footer/footer-avt-tab.png")
+                source(media="(max-width: 550px)" srcset="img/footer/footer-avt-mob.png")
+                img(src="img/footer/footer-avt-desc.png" alt="Favbet")
+            a(href='#').footer__link.custom-btn-two крутити рулетку
+        .footer__text Детальну інформацію можна дізнатись у правилах Організатора у пункті 6.9 <a href='https://www.favbet.ua/uk/rules/'>https://www.favbet.ua/uk/rules/</a>
 
 
 
