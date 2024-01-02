@@ -1,0 +1,1111 @@
+\:root
+  --promo-color-white: #FFFFFF
+  --promo-color-magenta: #ff267e
+  --promo-color-green: #05C48A
+  --promo-color-green-opacity: #187358
+  --promo-color-gray: rgba(236, 234, 234, 0.80)
+  --promo-color-magenta-opacity: rgba(255, 38, 126, 0.2)
+  --promo-color-table-border: #32284D
+  --promo-bg-color: #00002C
+  --promo-detail-bg: linear-gradient(137deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.05) 100%)
+  --promo-detail-shadow: 0px 1px 2px 0px rgba(255, 255, 255, 0.10) inset, 0px 10px 30px 0px rgba(0, 0, 0, 0.20)
+  --promo-shadow-btn-color: 0px 2px 2px rgba(0, 0, 0, 0.60)
+  --promo-shadow-title-color: 0px 5px 0px rgba(0, 0, 0, 0.30), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 20px #FF008B
+  --promo-color-gradient-blue: linear-gradient(180deg, rgba(0, 0, 44, 0.00) 0%, #00002C 90.57%)
+  --promo-color-gradient-blue-prize: linear-gradient(270deg, #00002C 0%, rgba(0, 0, 44, 0.00) 100%)
+
+
+
+//fonts
+$font-suisse-semb: SuisseIntl-SemiBold, sans-serif
+$font-kalam-reg: Kalam-Regular, sans-serif
+$font-kalam-bold: Kalam-Bold, sans-serif
+$font-kashan-reg: KaushanScript-Regular, sans-serif
+$font-play-bold: Play-Bold, sans-serif
+$font-play-reg: Play-Regular, sans-serif
+
+body
+  &.dark
+    --promo-bg-color: #111218
+    --promo-color-gradient-blue: linear-gradient(180deg, rgba(17, 18, 24, 0.00) 0%, #111218 90.57%)
+    --promo-color-gradient-blue-prize: linear-gradient(90deg, rgba(17, 18, 24, 0.00) 0%, #111218 100%)
+    .tableResults
+      &__wrap
+        background: url("https://fav-prom.com/html/ny-ro/img/result/result-table-bg-desc-dark.png") no-repeat 0 0/contain
+        @media screen and (max-width: 1024px)
+          background: url("https://fav-prom.com/html/ny-ro/img/result/result-table-bg-tab-dark.png") no-repeat 0 0/contain
+        @media screen and (max-width: 550px)
+          background: url("https://fav-prom.com/html/ny-ro/img/result/result-table-bg-mob-dark.png") no-repeat 0 0/contain
+    .detail
+      &__btn
+        &::before
+          background: url("https://fav-prom.com/html/ny-ro/img/detail/line-detail-dark.svg") no-repeat 0 0/contain
+    .prize
+      &__container
+        &::before
+          background: url("https://fav-prom.com/html/ny-ro/img/prize/prize-decor-one-dark.svg") no-repeat 0 0/contain
+        &::after
+          background: url("https://fav-prom.com/html/ny-ro/img/prize/prize-decor-two-dark.svg") no-repeat 0 0/contain
+    .rules
+      &__item
+        &-one
+          &::before
+            background: url("https://fav-prom.com/html/ny-ro/img/rules/line-one-dark.svg") no-repeat 0 0/contain
+          .rules__item-text
+            background: url("https://fav-prom.com/html/ny-ro/img/rules/bg-item1-dark.svg") no-repeat 0 0/contain
+        &-two
+          &::before
+            background: url("https://fav-prom.com/html/ny-ro/img/rules/line-two-dark.svg") no-repeat 0 0/contain
+          .rules__item-text
+            background: url("https://fav-prom.com/html/ny-ro/img/rules/bg-item2-dark.svg") no-repeat 0 0/contain
+        &-three
+          .rules__item-text
+            background: url("https://fav-prom.com/html/ny-ro/img/rules/bg-item3-dark.svg") no-repeat 0 0/contain
+
+.overflow
+  overflow-x: hidden !important
+
+.hide
+  display: none !important
+
+.you
+  span
+    font-family: $font-kalam-reg
+    font-size: 14px
+    color: var(--promo-color-magenta)
+    text-transform: uppercase
+    @media screen and (max-width: 700px)
+      font-size: 7px
+
+body
+  background: var(--promo-bg-color)
+  img
+    max-width: 100%
+    height: auto
+
+
+.fav__page
+  background: var(--promo-bg-color)
+  -webkit-tap-highlight-color: transparent
+  position: relative
+  display: flex
+  flex-direction: column
+  &::before,
+  &::after
+    content: ''
+    position: absolute
+    width: 170px
+    height: 100%
+    pointer-events: none
+    background: url("https://fav-prom.com/html/ny-ro/img/snow-desc.png") repeat-y 0 0/contain
+    @media screen and (max-width: 1024px)
+      background: url("https://fav-prom.com/html/ny-ro/img/snow-tab.png") repeat-y 0 0/contain
+    @media screen and (max-width: 1024px)
+      background: url("https://fav-prom.com/html/ny-ro/img/snow-mob.png") repeat-y 0 0/contain
+    top: 0
+    z-index: 11
+    animation: snowAnimation 200s linear infinite
+    @media screen and (max-width: 1300px)
+      width: 120px
+    @media screen and (max-width: 1300px)
+      width: 80px
+  &::after
+    right: 0
+  &::before
+    left: 0
+    transform: scale(-1, 1)
+  &.overflow
+    overflow: hidden
+
+.custom-btn
+  width: 310px
+  height: 70px
+  display: flex
+  align-items: center
+  justify-content: center
+  font-family: $font-suisse-semb
+  color: var(--promo-color-white)
+  text-shadow: var(--promo-shadow-btn-color)
+  background: url("https://fav-prom.com/html/ny-ro/img/btn-bg.png") no-repeat 0 0/contain
+  font-size: 24px
+  line-height: 24px
+  letter-spacing: 1.92px
+  transition: opacity .3s ease
+  cursor: pointer
+  @media screen and (max-width: 1300px)
+    width: 240px
+    height: 55px
+    font-size: 18px
+    line-height: 18px
+  &:hover
+    opacity: .8
+
+.custom-drop
+  max-width: 1000px
+  width: 100%
+  margin: 0 auto
+  cursor: pointer
+  outline: none!important
+  position: relative
+  text-align: left
+  @media screen and (max-width: 1300px)
+    max-width: 800px
+  &[open]
+    .custom-drop-title:before
+      transform: translateY(-50%) rotate(-180deg)
+  &-title
+    border-radius: 20px
+    background: var(--promo-detail-bg)
+    box-shadow: var(--promo-detail-shadow)
+    backdrop-filter: blur(10px)
+    font-family: $font-kalam-reg
+    font-size: 32px
+    line-height: 32px
+    color: var(--promo-color-white)
+    letter-spacing: .48px
+    padding: 27px 76px 20px 26px
+    position: relative
+    @media screen and (max-width: 1300px)
+      padding: 20px 76px 15px 20px
+      border-radius: 8px
+      font-size: 24px
+      line-height: 24px
+    &:before
+      content: ""
+      background: url("https://fav-prom.com/html/ny-ro/img/btn-detail.png") no-repeat 0 0/contain
+      position: absolute
+      width: 40px
+      height: 40px
+      top: 50%
+      right: 20px
+      transform: translateY(-50%)
+      z-index: 3
+      @media screen and (max-width: 1300px)
+        width: 28px
+        height: 28px
+  summary::-webkit-details-marker
+    display: none
+  > summary
+    list-style: none
+  &-txt
+    cursor: default
+    background: var(--promo-detail-bg)
+    box-shadow: var(--promo-detail-shadow)
+    backdrop-filter: blur(10px)
+    border-radius: 20px
+    margin-top: 10px
+    padding: 30px
+    @media screen and (max-width: 1300px)
+      border-radius: 8px
+    @media screen and (max-width: 550px)
+      padding: 20px 20px
+    &-wrap
+      height: 400px
+      overflow-y: scroll
+      font-family: $font-play-reg
+      font-size: 14px
+      line-height: 28px
+      color: var(--promo-color-gray)
+      letter-spacing: .02em
+      padding: 0 20px 0 0
+      @media screen and (max-width: 550px)
+        padding: 0 15px 0 0
+      &::-webkit-scrollbar
+        width: 4px
+        height: 80%
+        border-radius: 50px
+        background: var(--promo-color-green-opacity)
+      &::-webkit-scrollbar-thumb
+        background-color: var(--promo-color-green)
+        width: 4px
+        border-radius: 50px
+      p
+        font-family:  $font-play-reg
+        font-size: 14px
+        line-height: 28px
+      span
+        font-family: $font-play-reg
+        display: block
+        padding-left: 15px
+      tr,td
+        font-family: $font-play-reg
+      .retreat1
+        padding-left: 30px
+      .title
+        font-family:  $font-play-bold
+        color: var(--promo-color-white)
+      .circle
+        padding-left: 15px
+        &:before
+          content: ''
+          width: 5px
+          height: 5px
+          background: var(--promo-color-gray)
+          border-radius: 50%
+          display: inline-block
+          margin: 0 4px 2px 0
+
+
+
+
+
+.welcome
+  position: relative
+  background: url("https://fav-prom.com/html/ny-ro/img/welcome/welcome-bg-desc.jpg") no-repeat 50% 0/cover
+  @media screen and (max-width: 1024px)
+    background: url("https://fav-prom.com/html/ny-ro/img/welcome/welcome-bg-tab.jpg") no-repeat 50% 0/cover
+  @media screen and (max-width: 550px)
+    background: url("https://fav-prom.com/html/ny-ro/img/welcome/welcome-bg-mob.jpg") no-repeat 50% 0/cover
+  &::before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 188px
+    bottom: 0
+    left: 0
+    z-index: 10
+    background: var(--promo-color-gradient-blue)
+  &__container
+    max-width: 1360px
+    padding: 95px 15px 410px
+    margin: 0 auto
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+  &__pers
+    position: absolute
+    bottom: 0
+    left: 0
+    max-width: 880px
+  &__present
+    position: absolute
+    bottom: -60px
+    right: 0
+    z-index: 11
+    max-width: 600px
+    img
+      animation: shadowMagenta 2s ease infinite
+    &::before
+      content: ''
+      position: absolute
+      bottom: -30px
+      left: -20%
+      width: 150%
+      height: 230px
+      z-index: 12
+      background: var(--promo-color-gradient-blue)
+  &__text
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: relative
+    z-index: 11
+    color: var(--promo-color-white)
+    text-shadow: var(--promo-shadow-title-color)
+    &-top
+      font-family: $font-kashan-reg
+      font-size: 82px
+      line-height: 82px
+      margin: 0 0 12px
+    &-bottom
+      font-family: $font-kalam-reg
+      font-size: 44px
+      line-height: 50px
+
+.detail
+  position: relative
+  z-index: 11
+  &__container
+    max-width: 1230px
+    margin: 0 auto
+    padding: 55px 15px 130px
+    display: flex
+    flex-direction: column
+    position: relative
+  &__decor
+    &-one
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 255px
+      height: 270px
+      transform: rotate(-5.5deg)
+      animation: 4s decTwo 1s ease infinite
+      background: url("https://fav-prom.com/html/ny-ro/img/detail/decor-one-desc.png") no-repeat 0 0/contain
+      @media screen and (max-width: 1024px)
+        background: url("https://fav-prom.com/html/ny-ro/img/detail/decor-one-tab.png") no-repeat 0 0/contain
+      @media screen and (max-width: 550px)
+        background: none
+    &-two
+      width: 305px
+      height: 265px
+      position: absolute
+      bottom: 20px
+      right: -40px
+      animation: decOne 4s ease infinite
+      background: url("https://fav-prom.com/html/ny-ro/img/detail/decor-two-desc.png") no-repeat 0 0/contain
+      @media screen and (max-width: 1024px)
+        background: url("https://fav-prom.com/html/ny-ro/img/detail/decor-two-tab.png") no-repeat 0 0/contain
+      @media screen and (max-width: 700px)
+        background: url("https://fav-prom.com/html/ny-ro/img/detail/decor-mob.png") no-repeat 0 0/contain
+  &__title
+    font-size: 58px
+    line-height: 70px
+    text-align: center
+    font-family: $font-kashan-reg
+    color: var(--promo-color-white)
+    text-shadow: var(--promo-shadow-title-color)
+    margin: 0 0 35px
+  &__text
+    max-width: 775px
+    font-size: 26px
+    line-height: 38px
+    color: var(--promo-color-white)
+    text-align: center
+    margin: 0 auto 55px
+    p
+      font-family: $font-kalam-reg
+  &__btn
+    align-self: center
+    position: relative
+    &::before
+      pointer-events: none
+      content: ''
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      bottom: -90px
+      height: 73px
+      width: 442px
+      background: url("https://fav-prom.com/html/ny-ro/img/detail/line-detail.svg") no-repeat 0 0/contain
+
+.prize
+  position: relative
+  z-index: 11
+  &__container
+    max-width: 1100px
+    padding: 50px 15px 90px
+    margin: 0 auto
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      top: 40px
+      left: -70px
+      width: 90px
+      height: 110px
+      background: url("https://fav-prom.com/html/ny-ro/img/prize/prize-decor-one.svg") no-repeat 0 0/contain
+    &::after
+      content: ''
+      position: absolute
+      top: 20px
+      right: -70px
+      width: 90px
+      height: 110px
+      background: url("https://fav-prom.com/html/ny-ro/img/prize/prize-decor-two.svg") no-repeat 0 0/contain
+  &__title
+    font-size: 52px
+    line-height: 68px
+    text-align: center
+    font-family: $font-kashan-reg
+    color: var(--promo-color-white)
+    text-shadow: var(--promo-shadow-title-color)
+    margin: 0 0 85px
+  &__row
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    gap: 60px 65px
+  &__item
+    width: 215px
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    &:nth-child(1)
+      .prize__item-img
+        width: 184px
+    &:nth-child(2)
+      .prize__item-img
+        width: 163px
+    &:nth-child(3)
+      .prize__item-img
+        width: 123px
+    &:nth-child(4)
+      .prize__item-img
+        width: 158px
+    &:nth-child(5)
+      .prize__item-img
+        width: 120px
+    &:nth-child(6)
+      .prize__item-img
+        width: 195px
+    &:nth-child(7)
+      .prize__item-img
+        width: 156px
+    &::before
+      content: ''
+      position: absolute
+      left: 50%
+      top: -95px
+      transform: translateX(-50%)
+      width: 320px
+      height: 300px
+      z-index: 6
+      background: url("https://fav-prom.com/html/ny-ro/img/prize/prize-item-bg-top-desc.png") no-repeat 0 0/contain
+      @media screen and (max-width: 1024px)
+        background: url("https://fav-prom.com/html/ny-ro/img/prize/prize-item-bg-top-tab.png") no-repeat 0 0/contain
+      @media screen and (max-width: 550px)
+        background: url("https://fav-prom.com/html/ny-ro/img/prize/prize-item-bg-top-mob.png") no-repeat 0 0/contain
+    &-img
+      position: relative
+      z-index: 5
+      margin: 0 0 40px
+      img
+        position: relative
+        z-index: 5
+        animation: prizeItem 2s ease infinite
+        &.pause
+          animation-play-state: paused
+      &::after
+        content: ''
+        position: absolute
+        width: 160px
+        height: 50px
+        left: 50%
+        bottom: -25px
+        z-index: 4
+        transform: translateX(-50%)
+        background: url("https://fav-prom.com/html/ny-ro/img/prize/prize-item-bg-bottom-desc.png") no-repeat 0 0/contain
+        @media screen and (max-width: 1024px)
+          background: url("https://fav-prom.com/html/ny-ro/img/prize/prize-item-bg-bottom-tab.png") no-repeat 0 0/contain
+        @media screen and (max-width: 550px)
+          background: url("https://fav-prom.com/html/ny-ro/img/prize/prize-item-bg-bottom-mob.png") no-repeat 0 0/contain
+    &-text
+      max-width: 170px
+      text-align: center
+      font-family: $font-kalam-reg
+      font-size: 24px
+      line-height: 30px
+      color: var(--promo-color-white)
+
+.info
+  margin: -170px 0 0 0
+  position: relative
+  background: url("https://fav-prom.com/html/ny-ro/img/info/info-bg-desc.png") no-repeat 50% 0/cover
+  @media screen and (max-width: 1024px)
+    background: url("https://fav-prom.com/html/ny-ro/img/info/info-bg-tab.png") no-repeat 50% 0/cover
+  @media screen and (max-width: 550px)
+    background: url("https://fav-prom.com/html/ny-ro/img/info/info-bg-mob.png") no-repeat 50% 0/cover
+  &::before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 210px
+    bottom: 0
+    left: 0
+    z-index: 1
+    background: var(--promo-color-gradient-blue)
+  &::after
+    content: ''
+    position: absolute
+    width: 100%
+    height: 240px
+    top: 0
+    left: 0
+    z-index: 1
+    transform: rotate(180deg)
+    background: var(--promo-color-gradient-blue)
+  &__container
+    max-width: 1440px
+    padding: 170px 15px 125px
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    &::before,
+    &::after
+      content: ''
+      position: absolute
+      width: 180px
+      height: 330px
+      z-index: 2
+      bottom: -80px
+      background: url("https://fav-prom.com/html/ny-ro/img/info/tree-desc.png") no-repeat 0 0/contain
+      @media screen and (max-width: 1024px)
+        background: url("https://fav-prom.com/html/ny-ro/img/info/tree-tab.png") no-repeat 0 0/contain
+      @media screen and (max-width: 550px)
+        background: url("https://fav-prom.com/html/ny-ro/img/info/tree-mob.png") no-repeat 0 0/contain
+    &::before
+      left: 0
+    &::after
+      right: 0
+      transform: scale(-1,1)
+  &__prize
+    &-left,
+    &-right
+      position: absolute
+      bottom: 0
+      z-index: 0
+      width: 335px
+      height: 340px
+      background: url("https://fav-prom.com/html/ny-ro/img/info/present-info-desc.png") no-repeat 0 0/contain
+      @media screen and (max-width: 1024px)
+        background: url("https://fav-prom.com/html/ny-ro/img/info/present-info-tab.png") no-repeat 0 0/contain
+    &-left
+      left: 0
+      animation: 3s decThree 1.5s ease infinite
+    &-right
+      animation: decThree 3s ease infinite
+      right: 0
+      transform: scale(-1, 1)
+  &__title
+    position: relative
+    z-index: 5
+    font-size: 52px
+    line-height: 70px
+    text-align: center
+    font-family: $font-kashan-reg
+    color: var(--promo-color-white)
+    text-shadow: var(--promo-shadow-title-color)
+    max-width: 850px
+    margin: 0 auto 40px
+  &__btn
+    position: relative
+    z-index: 5
+    align-self: center
+
+.rules
+  padding: 0 0 70px
+  &__container
+    position: relative
+    z-index: 11
+    max-width: 1030px
+    padding: 0 15px
+    margin: 0 auto
+  &__title
+    font-size: 52px
+    line-height: 70px
+    text-align: center
+    font-family: $font-kashan-reg
+    color: var(--promo-color-white)
+    text-shadow: var(--promo-shadow-title-color)
+    margin: 0 0 65px
+  &__list
+    display: flex
+    justify-content: center
+    margin: 0 0 45px
+  &__item
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: relative
+    &-img
+      position: relative
+      z-index: 5
+    &-one
+      margin: 0 75px 0 0
+      &::before
+        content: ''
+        position: absolute
+        top: 50px
+        right: -170px
+        width: 150px
+        height: 135px
+        transform: rotate(30deg)
+        animation: 2s decFourth 1s ease infinite
+        background: url("https://fav-prom.com/html/ny-ro/img/rules/line-one.svg") no-repeat 0 0/contain
+      .rules__item-img
+        width: 220px
+      .rules__item-text
+        margin-top: -55px
+        width: 285px
+        height: 195px
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        padding: 12px 20px 0
+        background: url("https://fav-prom.com/html/ny-ro/img/rules/bg-item1.svg") no-repeat 0 0/contain
+    &-two
+      margin: 0 25px 0 0
+      &::before
+        content: ''
+        position: absolute
+        top: 70px
+        right: -80px
+        width: 100px
+        height: 90px
+        animation: 2s decOne 1s ease infinite
+        background: url("https://fav-prom.com/html/ny-ro/img/rules/line-two.svg") no-repeat 0 0/contain
+      .rules__item-text
+        margin-top: -15px
+        width: 470px
+        height: 210px
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        padding: 12px 20px 0
+        background: url("https://fav-prom.com/html/ny-ro/img/rules/bg-item2.svg") no-repeat 0 0/contain
+    &-three
+      .rules__item-text
+        margin-top: -35px
+        width: 410px
+        height: 200px
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        padding: 2px 50px 0
+        background: url("https://fav-prom.com/html/ny-ro/img/rules/bg-item3.svg") no-repeat 0 0/contain
+    &-two,
+    &-three
+      .rules__item-img
+        width: 240px
+    &-text
+      font-family: $font-kalam-reg
+      font-size: 32px
+      line-height: 38px
+      color: var(--promo-color-white)
+
+.result
+  padding: 0 0 70px
+  position: relative
+  &::before,
+  &::after
+    content: ''
+    position: absolute
+    width: 180px
+    height: 330px
+    z-index: 2
+    top: -80px
+    background: url("https://fav-prom.com/html/ny-ro/img/info/tree-desc.png") no-repeat 0 0/contain
+    @media screen and (max-width: 1024px)
+      background: url("https://fav-prom.com/html/ny-ro/img/info/tree-tab.png") no-repeat 0 0/contain
+    @media screen and (max-width: 550px)
+      background: url("https://fav-prom.com/html/ny-ro/img/info/tree-mob.png") no-repeat 0 0/contain
+  &::before
+    left: 0
+  &::after
+    right: 0
+    transform: scale(-1,1)
+  &__bg
+    position: absolute
+    width: 100%
+    top: 0
+    left: 0
+    height: 540px
+    background: url("https://fav-prom.com/html/ny-ro/img/info/info-bg-desc.png") no-repeat 50% 0/cover
+    @media screen and (max-width: 1024px)
+      background: url("https://fav-prom.com/html/ny-ro/img/info/info-bg-tab.png") no-repeat 50% 0/cover
+    @media screen and (max-width: 550px)
+      background: url("https://fav-prom.com/html/ny-ro/img/info/info-bg-mob.png") no-repeat 50% 0/cover
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 240px
+      top: 0
+      left: 0
+      z-index: 1
+      transform: rotate(180deg)
+      background: var(--promo-color-gradient-blue)
+    &::before
+      content: ''
+      position: absolute
+      width: 100%
+      height: 210px
+      bottom: 0
+      left: 0
+      z-index: 1
+      background: var(--promo-color-gradient-blue)
+  &__container
+    position: relative
+    z-index: 12
+    max-width: 1240px
+    padding: 0 15px
+    margin: 0 auto
+  &__title
+    font-size: 52px
+    line-height: 68px
+    text-align: center
+    font-family: $font-kashan-reg
+    color: var(--promo-color-white)
+    text-shadow: var(--promo-shadow-title-color)
+    margin: 0 0 40px
+  &__row
+    display: flex
+    justify-content: center
+    gap: 65px
+    margin: 0 0 40px
+  &__item
+    display: flex
+    flex-direction: column
+    &-title
+      font-family: $font-kalam-reg
+      font-size: 32px
+      line-height: 38px
+      text-align: center
+      color: var(--promo-color-white)
+      margin: 0 0 40px
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        width: 355px
+        height: 60px
+        bottom: -40px
+        background: url("https://fav-prom.com/html/ny-ro/img/result/line-results.svg") no-repeat 0 0/contain
+    &:first-child
+      .result__item-title::before
+        left: 50%
+        transform: translateX(-50%)
+    &:last-child
+      .result__item-title::before
+        left: 50%
+        transform: translateX(-50%) scale(-1, 1)
+
+.tableResults
+  text-align: center
+  position: relative
+  z-index: 3
+  &::before,
+  &::after
+    content: ''
+    position: absolute
+    width: 150px
+    height: 570px
+    top: 0
+    z-index: 1
+    animation: shadowWhite 2s ease infinite
+    background: url("https://fav-prom.com/html/ny-ro/img/result/light-desc.png") no-repeat 0 0/contain
+    @media screen and (max-width: 1024px)
+      background: url("https://fav-prom.com/html/ny-ro/img/result/light-tab.png") no-repeat 0 0/contain
+    @media screen and (max-width: 700px)
+      background: url("https://fav-prom.com/html/ny-ro/img/result/light-mob.png") no-repeat 0 0/contain
+  &::before
+    left: -60px
+  &::after
+    right: -80px
+  &__wrap
+    margin: 0 auto
+    width: 590px
+    height: 595px
+    padding: 160px 20px 20px 40px
+    text-align: left
+    position: relative
+    z-index: 11
+    background: url("https://fav-prom.com/html/ny-ro/img/result/result-table-bg-desc.png") no-repeat 0 0/contain
+    @media screen and (max-width: 1024px)
+      background: url("https://fav-prom.com/html/ny-ro/img/result/result-table-bg-tab.png") no-repeat 0 0/contain
+    @media screen and (max-width: 550px)
+      background: url("https://fav-prom.com/html/ny-ro/img/result/result-table-bg-mob.png") no-repeat 0 0/contain
+  &__head
+    margin-right: 10px
+    margin-bottom: 15px
+    position: relative
+    &-list
+      display: flex
+    &-col
+      font-family: $font-kalam-bold
+      font-size: 25px
+      line-height: 25px
+      color: var(--promo-color-magenta)
+      margin: 0 11px 0 0
+      &:nth-child(1)
+        width: 15%
+      &:nth-child(2)
+        width: 20%
+      &:nth-child(3)
+        width: 25%
+      &:nth-child(4)
+        width: 40%
+        margin: 0
+  &__body
+    overflow-y: scroll
+    padding-right: 15px
+    z-index: 11
+    max-height: 375px
+    font-size: 18px
+    background: transparent
+    &::before
+      content: ''
+      position: absolute
+      width: 100%
+      height: 70px
+      bottom: 0
+      left: 0
+      z-index: 2
+      background: var(--promo-color-gradient-blue)
+    &::-webkit-scrollbar
+      width: 5px
+      height: 80%
+      border-radius: 50px
+      background: var(--promo-color-green-opacity)
+    &::-webkit-scrollbar-thumb
+      background-color: var(--promo-color-green)
+      border-radius: 50px
+    &-col
+      font-family: $font-kalam-reg
+      font-size: 22px
+      line-height: 27px
+      width: 25%
+      margin-right: 15px
+      display: flex
+      align-items: center
+      color: var(--promo-color-white)
+      text-align: start
+      word-break: break-word
+      &:nth-child(1)
+        width: 15%
+      &:nth-child(2)
+        width: 20%
+      &:nth-child(3)
+        width: 25%
+      &:nth-child(4)
+        width: 40%
+        margin: 0
+  &__row
+    word-break: break-all
+    display: flex
+    margin-bottom: 20px
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      width: 100%
+      height: 1px
+      bottom: 0
+      left: 0
+      z-index: -1
+      background: var(--promo-color-table-border)
+      transform-origin: bottom right
+      transform: rotate(1.3deg)
+    &:last-child
+      margin-bottom: 0
+
+.footer
+  position: relative
+  background: url("https://fav-prom.com/html/ny-ro/img/welcome/welcome-bg-desc.jpg") no-repeat 50% 0/cover
+  @media screen and (max-width: 1024px)
+    background: url("https://fav-prom.com/html/ny-ro/img/welcome/welcome-bg-tab.jpg") no-repeat 50% 0/cover
+  @media screen and (max-width: 700px)
+    background: url("https://fav-prom.com/html/ny-ro/img/info/info-bg-tab.png") no-repeat 50% 0/cover
+  @media screen and (max-width: 550px)
+  &::before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 120%
+    top: 0
+    left: 0
+    z-index: 9
+    transform: rotate(180deg)
+    background: var(--promo-color-gradient-blue)
+
+  &__container
+    max-width: 1410px
+    padding: 95px 15px 250px
+    margin: 0 auto
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+  &__wrap
+    position: relative
+    z-index: 10
+    display: flex
+    flex-direction: column
+  &__pers
+    position: absolute
+    bottom: -5px
+    left: 0
+    z-index: 10
+    max-width: 880px
+  &__text
+    display: flex
+    flex-direction: column
+    align-items: center
+    color: var(--promo-color-white)
+    text-shadow: var(--promo-shadow-title-color)
+    margin: 0 0 25px
+    &-top
+      font-family: $font-kashan-reg
+      font-size: 82px
+      line-height: 82px
+      margin: 0 0 12px
+    &-bottom
+      font-family: $font-kalam-reg
+      font-size: 44px
+      line-height: 50px
+  &__btn
+    align-self: center
+
+.video
+  margin: -170px 0 0 0
+  position: relative
+  background: url("../img/info/info-bg-desc.png") no-repeat 50% 0/cover
+  @media screen and (max-width: 1024px)
+    background: url("../img/info/info-bg-tab.png") no-repeat 50% 0/cover
+  @media screen and (max-width: 550px)
+    background: url("../img/info/info-bg-mob.png") no-repeat 50% 0/cover
+  .video-frame
+    position: relative
+    width: 900px
+    height: 525px
+  &__img
+    position: relative
+    z-index: 32
+    cursor: pointer
+  &::before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 210px
+    bottom: 0
+    left: 0
+    z-index: 1
+    background: var(--promo-color-gradient-blue)
+  &::after
+    content: ''
+    position: absolute
+    width: 100%
+    height: 240px
+    top: 0
+    left: 0
+    z-index: 1
+    transform: rotate(180deg)
+    background: var(--promo-color-gradient-blue)
+  &__container
+    max-width: 1440px
+    padding: 170px 15px 125px
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    &::before,
+    &::after
+      content: ''
+      position: absolute
+      width: 180px
+      height: 330px
+      z-index: 2
+      bottom: -10px
+      background: url("../img/info/tree-desc.png") no-repeat 0 0/contain
+      @media screen and (max-width: 1024px)
+        background: url("../img/info/tree-tab.png") no-repeat 0 0/contain
+      @media screen and (max-width: 550px)
+        background: url("../img/info/tree-mob.png") no-repeat 0 0/contain
+    &::before
+      left: 0
+    &::after
+      right: 0
+      transform: scale(-1,1)
+  &__prize
+    &-left,
+    &-right
+      position: absolute
+      bottom: 0
+      z-index: 0
+      width: 335px
+      height: 340px
+      background: url("../img/info/present-info-desc.png") no-repeat 0 0/contain
+      @media screen and (max-width: 1024px)
+        background: url("../img/info/present-info-tab.png") no-repeat 0 0/contain
+    &-left
+      left: 0
+      animation: 3s decThree 1.5s ease infinite
+    &-right
+      animation: decThree 3s ease infinite
+      right: 0
+      transform: scale(-1, 1)
+  &__title
+    position: relative
+    z-index: 5
+    font-size: 52px
+    line-height: 70px
+    text-align: center
+    font-family: $font-kashan-reg
+    color: var(--promo-color-white)
+    text-shadow: var(--promo-shadow-title-color)
+    max-width: 850px
+    margin: 0 auto 40px
+  &__btn
+    position: relative
+    z-index: 5
+    align-self: center
+
+
+@keyframes animArrow
+  0%
+    transform: translateX(-5px)
+  50%
+    transform: translateX(5px)
+  100%
+    transform: translateX(-5px)
+
+@keyframes snowAnimation
+  0%
+    background-position: 0 0
+  100%
+    background-position: 0 100%
+
+@keyframes shadowMagenta
+  0%
+    filter: drop-shadow(0px 0px 0px var(--promo-color-magenta))
+  50%
+    filter: drop-shadow(0px 0px 15px var(--promo-color-magenta))
+  100%
+    filter: drop-shadow(0px 0px 0px var(--promo-color-magenta))
+
+@keyframes shadowWhite
+  0%
+    filter: drop-shadow(0px 0px 3px var(--promo-color-white))
+  50%
+    filter: drop-shadow(0px 0px 17px var(--promo-color-white))
+  100%
+    filter: drop-shadow(0px 0px 3px var(--promo-color-white))
+
+@keyframes decOne
+  0%
+    transform: rotate(0deg) scale(1)
+  50%
+    transform: rotate(4deg) scale(1.05)
+  100%
+    transform: rotate(0deg) scale(1)
+
+@keyframes decTwo
+  0%
+    transform: rotate(-5.5deg) scale(1)
+  50%
+    transform: rotate(-1.5deg) scale(1.05)
+  100%
+    transform: rotate(-5.5deg) scale(1)
+
+@keyframes decThree
+  0%
+    transform: rotate(0deg) scale(1)
+  50%
+    transform: translateY(-10px) scale(1.05)
+  100%
+    transform: rotate(0deg) scale(1)
+
+@keyframes decFourth
+  0%
+    transform: rotate(30deg) scale(1)
+  50%
+    transform: rotate(32deg) scale(1.05)
+  100%
+    transform: rotate(30deg) scale(1)
+
+@keyframes prizeItem
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.04)
+  100%
+    transform: scale(1)
+
+
+
