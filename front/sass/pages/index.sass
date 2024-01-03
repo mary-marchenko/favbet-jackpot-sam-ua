@@ -48,6 +48,8 @@ body
   background: var(--promo-bg-color)
 
 .wrapper-bg
+  display: flex
+  flex-direction: column
   background: url("../img/big-bg.svg") no-repeat 50% 0/cover
 
 .custom-btn
@@ -113,6 +115,10 @@ body
     background: url("../img/btn-bg2-hover.png") no-repeat 0 0/contain
   &:hover::before
     opacity: 1
+  @media screen and (max-width: 550px)
+    padding: 0 45px 22px
+    line-height: 25px
+    text-align: center
 
 .welcome
   align-self: center
@@ -392,7 +398,7 @@ body
       font-family: $font-suisse-semb
       color: var(--promo-colo-orange-two)
       text-shadow: var(--promo-shadow-orange-two-text)
-    &-wrap
+    &-btns
       margin: 0 0 auto
       display: flex
       align-items: center

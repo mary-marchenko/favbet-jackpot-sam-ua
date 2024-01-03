@@ -21,12 +21,18 @@ document.addEventListener('DOMContentLoaded', function () {
             const scale = index === currentIndex ? 1 : 0.8;
 
             item.style.transform = `translateX(${newPosition}%) scale(${scale})`;
-            //item.style.margin = `0 -500px`;
             item.style.zIndex = index === currentIndex ? 2 : 1;
 
             const isVisible = Math.abs(distance) <= 1 || (index === 0 && currentIndex === totalItems - 1) || (index === totalItems - 1 && currentIndex === 0);
             item.classList.toggle('hidden', !isVisible);
             item.classList.toggle('active', index === currentIndex);
+
+            item.classList.remove('left-slide', 'right-slide');
+            if (distance === 1 || (currentIndex === totalItems - 1 && index === 0)) {
+                item.classList.add('right-slide');
+            } else if (distance === -1 || (currentIndex === 0 && index === totalItems - 1)) {
+                item.classList.add('left-slide');
+            }
         });
     }
 
@@ -78,5 +84,5 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('mouseup', handleEnd);
     document.addEventListener('touchend', handleEnd);
 
-    updateSlider(); // Инициализация слайдера
+    updateSlider();
 });

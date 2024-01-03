@@ -1,0 +1,415 @@
+//WELCOME
+@media screen and (max-width: 1260px)
+  .welcome
+    &__container
+      max-width: 1030px
+      min-width: 1030px
+    &__text
+      max-width: 685px
+    &__image
+      &-title
+        margin: -40px 0 0 0
+        max-width: 510px
+      &-right
+        right: 60px
+        width: 190px
+        height: 365px
+      &-left
+        z-index: 10
+        left: 20px
+        width: 320px
+        height: 390px
+      &-pers
+        margin: -40px 0 0 0
+        max-width: 710px
+        &-text
+          top: -50px
+          right: 90px
+          transform: rotate(7.221deg) scale(.7)
+
+@media screen and (max-width: 860px)
+  .welcome
+    &__text
+      max-width: 515px
+      font-size: 9px
+      line-height: 10px
+    &__image
+      &-left
+        left: 90px
+        width: 260px
+        height: 330px
+      &-right
+        right: 120px
+        width: 160px
+        height: 325px
+      &-pers
+        max-width: 640px
+        &-text
+          top: -59px
+          transform: rotate(7.221deg) scale(0.6)
+
+@media screen and (max-width: 660px)
+  .welcome
+    &__image
+      &-left
+        left: 160px
+      &-right
+        right: 200px
+        width: 160px
+        height: 315px
+
+@media screen and (max-width: 550px)
+  .welcome
+    &__container
+      max-width: 670px
+      min-width: 670px
+    &__text
+      margin: -30px auto 0
+      max-width: 315px
+      font-size: 7px
+    &__image
+      &-title
+        margin: -20px 0 0 0
+        max-width: 310px
+      &-right
+        right: 120px
+        width: 120px
+        height: 235px
+      &-left
+        left: 90px
+        width: 210px
+        height: 253px
+      &-pers
+        max-width: 420px
+        &-text
+          right: 0px
+          transform: rotate(7.221deg) scale(0.35)
+
+//DETAIL
+@media screen and (max-width: 1260px)
+  .detail
+    padding: 40px 0 0
+    &__container
+      max-width: 900px
+    &__info
+      display: flex
+      flex-direction: column
+      align-items: center
+      min-width: 380px
+      max-width: 390px
+    &__image
+      margin: 0 0 0 -160px
+      &-text
+        top: 20px
+        right: -60px
+        transform: rotate(7.221deg) scale(.7)
+    &__text
+      min-width: 600px
+      max-width: 600px
+      text-align: center
+    &__title
+      display: flex
+      flex-direction: column
+      align-items: center
+      &-top
+        text-align: center
+      &-bottom
+        margin: -14px -50px -10px 0px
+    &__row
+      padding: 160px 0 0
+      position: relative
+    &__wrap
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+
+@media screen and (max-width: 860px)
+  .detail
+    &__container
+      max-width: 740px
+    &__title
+      &-top
+        font-size: 44px
+        line-height: 44px
+      &-bottom
+        margin: -3px 0px -10px 0px
+        width: 385px
+        height: 100px
+    &__text
+      font-size: 17px
+      line-height: 30px
+      min-width: 500px
+      max-width: 500px
+    &__subtitle
+      font-size: 36px
+      line-height: 36px
+      margin: 0 0 20px
+    &__item
+      font-size: 14px
+      line-height: 24px
+    &__info
+      min-width: 330px
+      max-width: 330px
+    &__row
+      padding: 140px 0 0
+    &__image
+      margin: 0 0 0 -120px
+      &-text
+        top: -10px
+        right: -70px
+        transform: rotate(7.221deg) scale(0.6)
+
+@media screen and (max-width: 740px)
+  .detail
+    &__info
+      margin-top: -45px
+      align-self: center
+      padding: 0
+      min-width: auto
+      max-width: 470px
+    &__row
+      padding: 160px 0 0
+      flex-direction: column-reverse
+    &__image
+      align-self: center
+      max-width: 570px
+      margin: 0 0 0 -70px
+      width: 100%
+
+@media screen and (max-width: 550px)
+  .detail
+    padding: 30px 0 0
+    &__title
+      &-bottom
+        width: 285px
+        height: 72px
+        margin: 2px 0px -3px 0px
+    &__item
+      gap: 10px
+    &__text
+      margin: 0
+      min-width: 320px
+      max-width: 320px
+      font-size: 14px
+      line-height: 23px
+    &__image
+      max-width: 345px
+      &-text
+        top: -40px
+        right: -80px
+        transform: rotate(7.221deg) scale(0.35)
+    &__subtitle
+      font-size: 30px
+      line-height: 30px
+
+@media screen and (max-width: 350px)
+  .detail
+    &__text
+      min-width: 310px
+      max-width: 320px
+      font-size: 13px
+    &__image
+      max-width: 290px
+      &-text
+        top: -50px
+        right: -100px
+
+//PRIZE
+@media screen and (max-width: 1260px)
+  .prize
+    margin: -120px 0 0 0
+
+@media screen and (max-width: 860px)
+  .prize
+    margin: -80px 0 0 0
+
+@media screen and (max-width: 740px)
+  .prize
+    margin: -120px 0 0 0
+    &__item
+     &-wrap
+       transform: scale(.8)
+
+@media screen and (max-width: 550px)
+  .prize
+    margin: -200px 0 0 0
+    &__item
+      &-wrap
+        transform: scale(.65)
+      &.left-slide
+        transform-origin: right center
+      &.right-slide
+        transform-origin: left center
+      &.active
+        .prize__item-wrap
+          transform-origin: center
+
+@media screen and (max-width: 370px)
+  .prize
+    margin: -250px 0 0 0
+    &__item
+      &-wrap
+        transform: scale(.55)
+
+//INFO
+@media screen and (max-width: 1440px)
+  .info
+    &__des
+      max-width: 480px
+
+@media screen and (max-width: 1260px)
+  .info
+    padding: 50px 0 0 0
+    &__des
+      padding-top: 70px
+      max-width: 360px
+    &__container
+      max-width: 940px
+    &__title
+      font-size: 36px
+      line-height: 36px
+    &__text
+      p
+        font-size: 14px
+        line-height: 28px
+    &__image
+      margin: 0 0 0 -70px
+      &-text
+        top: 0
+        right: 30px
+        transform: rotate(7.221deg) scale(0.6)
+
+@media screen and (max-width: 860px)
+  .info
+    &__title
+      font-size: 33px
+      line-height: 33px
+
+@media screen and (max-width: 800px)
+  .info
+    &__des
+      max-width: 310px
+    &__image
+      &-text
+        top: -20px
+        right: -10px
+
+@media screen and (max-width: 740px)
+  .info
+    padding: 0
+    margin: -190px 0 0 0
+    &__container
+      max-width: 550px
+    &__image
+      margin: 0
+    &__row
+      flex-direction: column
+    &__des
+      padding: 0
+      max-width: 100%
+
+@media screen and (max-width: 550px)
+  .info
+    margin: -280px 0 0 0
+
+    &__image
+      align-self: center
+      max-width: 380px
+      display: flex
+      justify-content: center
+      img
+        min-width: 125%
+        margin: 0 0 0 -40px
+      &-text
+        right: -20px
+        transform: rotate(7.221deg) scale(0.35)
+
+@media screen and (max-width: 370px)
+  .info
+    margin: -320px 0 0 0
+    &__image
+      max-width: 320px
+    &__image
+      &-text
+        right: -50px
+        top: -30px
+
+//FOOTER
+@media screen and (max-width: 1440px)
+  .footer
+    display: flex
+    flex-direction: column
+    align-self: center
+    margin: -20px 0 0 0
+    &__container
+      align-self: center
+      min-width: 1400px
+
+@media screen and (max-width: 1030px)
+  .footer
+    &__title
+      font-size: 58px
+
+@media screen and (max-width: 960px)
+  .footer
+    &__row
+      transform: scale(.9)
+      margin: -80px 0 0 0
+
+@media screen and (max-width: 840px)
+  .footer
+    padding: 30px 0
+    margin: 0
+    &__title
+      font-size: 44px
+    &__row
+      transform: scale(.8)
+      margin: -120px 0 0 0
+
+@media screen and (max-width: 740px)
+  .footer
+    padding: 50px 0 30px
+    margin: 0
+    &__title
+      font-size: 44px
+    &__row
+      transform: scale(.7)
+      margin: -140px 0 -50px 0
+
+@media screen and (max-width: 615px)
+  .footer
+    padding: 50px 0 30px
+    margin: 0
+    &__title
+      font-size: 37px
+    &__row
+      transform: scale(.6)
+      margin: -180px 0 -70px 0
+
+@media screen and (max-width: 550px)
+  .footer
+    &__title
+      font-size: 44px
+      line-height: 46px
+      max-width: 350px
+      margin: 0 auto
+      text-align: center
+    &__item
+      &:first-child
+        margin: 0 -360px 0 0
+    &__row
+      margin: -220px 0 -150px 0
+      transform: scale(.42)
+    &__text
+      font-size: 12px
+      line-height: 14px
+      max-width: 310px
+
+@media screen and (max-width: 360px)
+  .footer
+    &__title
+      font-size: 41px
+    &__row
+      margin: -230px 0 -170px 0
+      transform: scale(.38)
