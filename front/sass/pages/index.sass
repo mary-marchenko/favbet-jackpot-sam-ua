@@ -239,11 +239,13 @@ body
       text-shadow: var(--promo-shadow-blue-text)
       font-family: $font-gawaa
     &-bottom
-      //animation: 3s decOne ease infinite
+      animation: 3s decOne ease infinite
       width: 483px
       height: 110px
       margin: -14px 0 -10px -25px
-      background: url("../img/detail/bonus.svg") no-repeat 0 0/contain
+      background: url("../img/detail/bonus-desc.png") no-repeat 0 0/contain
+      @media screen and (max-width: 550px)
+        background: url("../img/detail/bonus-mob.png") no-repeat 0 0/contain
 
   &__text
     font-family: $font-suisse-reg
