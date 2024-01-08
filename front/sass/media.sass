@@ -7,6 +7,17 @@
     &__text
       max-width: 685px
     &__image
+      &::before
+        top: 168px
+        left: 223px
+        z-index: 6
+        width: 113px
+        height: 170px
+      &::after
+        right: 245px
+        width: 90px
+        height: 70px
+        top: 264px
       &-title
         margin: -40px 0 0 0
         max-width: 510px
@@ -68,6 +79,17 @@
       max-width: 315px
       font-size: 7px
     &__image
+      &::before
+        top: 107px
+        left: 143px
+        z-index: 6
+        width: 73px
+        height: 90px
+      &::after
+        right: 153px
+        width: 60px
+        height: 42px
+        top: 170px
       &-title
         margin: -20px 0 0 0
         max-width: 310px
@@ -102,7 +124,9 @@
       &-text
         top: 20px
         right: -60px
-        transform: rotate(7.221deg) scale(.7)
+        transform: scale(.7) translate(-80px, 0)
+        &._view
+          transform: scale(0.7) translate(0, 0)
     &__text
       min-width: 600px
       max-width: 600px
@@ -158,7 +182,9 @@
       &-text
         top: -10px
         right: -70px
-        transform: rotate(7.221deg) scale(0.6)
+        transform: scale(0.6) translate(-80px, 0)
+        &._view
+          transform: scale(0.6) translate(0, 0)
 
 @media screen and (max-width: 740px)
   .detail
@@ -174,7 +200,7 @@
     &__image
       align-self: center
       max-width: 570px
-      margin: 0 0 0 -70px
+      margin: 0 0 30px -10px
       width: 100%
 
 @media screen and (max-width: 550px)
@@ -198,7 +224,9 @@
       &-text
         top: -40px
         right: -80px
-        transform: rotate(7.221deg) scale(0.35)
+        transform: scale(0.35) translate(-80px, 0)
+        &._view
+          transform: scale(0.35) translate(0)
     &__subtitle
       font-size: 30px
       line-height: 30px
@@ -278,7 +306,9 @@
       &-text
         top: 0
         right: 30px
-        transform: rotate(7.221deg) scale(0.6)
+        transform: scale(0.6) translate(-80px, 0)
+        &._view
+          transform: scale(0.6) translate(0, 0)
 
 @media screen and (max-width: 860px)
   .info
@@ -323,7 +353,9 @@
         margin: 0 0 0 -40px
       &-text
         right: -20px
-        transform: rotate(7.221deg) scale(0.35)
+        transform: scale(0.35) translate(-80px, 0)
+        &._view
+          transform: scale(0.35) translate(0, 0)
 
 @media screen and (max-width: 370px)
   .info
