@@ -141,7 +141,8 @@ body
       z-index: 5
       margin: -80px 0 0 0
       max-width: 750px
-      animation: 3s shadowMagenta ease infinite
+      filter: grayscale(1) brightness(0.5)
+      animation: 4s titleAnimation ease infinite
     &-bg
       position: absolute
       width: 100%
@@ -589,6 +590,8 @@ body
     margin: -100px 0 60px 0
     display: flex
   &__link
+    position: relative
+    z-index: 30
     animation: 2s decOne ease infinite
     &:hover
       animation-play-state: paused
@@ -660,6 +663,22 @@ body
     filter: grayscale(0) brightness(1)
   100%
     filter: grayscale(0) brightness(1)
+
+@keyframes titleAnimation
+  0%
+    filter: grayscale(1) brightness(0.5)
+  10%
+    filter: grayscale(0) brightness(1)
+  20%
+    filter: grayscale(1) brightness(0.5)
+  30%
+    filter: grayscale(0) brightness(1)
+  70%
+    filter: grayscale(0) brightness(1)
+  90%
+    filter: grayscale(0) brightness(1)
+  100%
+    filter: grayscale(1) brightness(0.5)
 
 @keyframes opacityArrow
   0%
