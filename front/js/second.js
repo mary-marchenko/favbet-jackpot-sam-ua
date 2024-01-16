@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+(function () {
     let currentIndex = 1;
     let startX = 0;
     let isDragging = false;
@@ -85,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('touchend', handleEnd);
 
     updateSlider();
-});
 
 
 /********************************ANIMATION******************************/
@@ -129,3 +128,5 @@ if(animItems.length > 0) {
     }, 300);
 
 }
+
+})();

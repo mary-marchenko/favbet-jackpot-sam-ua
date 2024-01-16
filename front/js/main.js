@@ -4,7 +4,7 @@
     const ukLeng = document.querySelector('#ukLeng'),
         enLeng = document.querySelector('#enLeng');
 
-    let locale = 'uk';
+    let locale = 'en';
 
     if (ukLeng) locale = 'uk';
     if (enLeng) locale = 'en';
@@ -29,7 +29,7 @@
     }
 
     function translate() {
-        const elems = document.querySelectorAll('[data-translates]')
+        const elems = document.querySelectorAll('[data-translate]')
         if (elems && elems.length) {
             elems.forEach(elem => {
                 const key = elem.getAttribute('data-translate');

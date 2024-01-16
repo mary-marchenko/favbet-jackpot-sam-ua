@@ -47,6 +47,30 @@ body
   display: flex
   flex-direction: column
   background: var(--promo-bg-color)
+  &.en
+    .welcome__image
+      &-title
+        img
+          content: url("https://fav-prom.com/html/jackpot/img/welcome/en/welcome-title-desc.png")
+          @media screen and (min-width: 551px) and (max-width: 1024px)
+            content: url("https://fav-prom.com/html/jackpot/img/welcome/en/welcome-title-tab.png")
+          @media screen and (max-width: 550px)
+            content: url("https://fav-prom.com/html/jackpot/img/welcome/en/welcome-title-mob.png")
+      &-right
+        background: url("https://fav-prom.com/html/jackpot/img/welcome/en/decor-right-desc.png") no-repeat 50% 0/contain
+        @media screen and (max-width: 1024px)
+          background: url("https://fav-prom.com/html/jackpot/img/welcome/en/decor-right-tab.png") no-repeat 50% 0/contain
+        @media screen and (max-width: 550px)
+          background: url("https://fav-prom.com/html/jackpot/img/welcome/en/decor-right-mob.png") no-repeat 50% 0/contain
+    .detail__title-bottom
+      background: url("https://fav-prom.com/html/jackpot/img/detail/en/bonus-desc.png") no-repeat 0 0/contain
+      @media screen and (max-width: 550px)
+        background: url("https://fav-prom.com/html/jackpot/img/detail/en/bonus-mob.png") no-repeat 0 0/contain
+    .titleTwo
+      img
+        content: url("https://fav-prom.com/html/jackpot/img/prize/en/title-slide2-desc.png")
+        @media screen and (max-width: 550px)
+          content: url("https://fav-prom.com/html/jackpot/img/prize/en/title-slide2-mob.png")
 
 .wrapper-bg
   display: flex
@@ -324,7 +348,7 @@ body
       position: relative
       z-index: 10
     &-text
-      z-index: 14
+      z-index: 12
       padding: 0 40px 49px
       display: flex
       flex-direction: column
@@ -545,7 +569,7 @@ body
       position: relative
       z-index: 12
     &-text
-      z-index: 15
+      z-index: 12
       padding: 0 40px 49px
       display: flex
       flex-direction: column
@@ -591,7 +615,7 @@ body
     display: flex
   &__link
     position: relative
-    z-index: 30
+    z-index: 12
     animation: 2s decOne ease infinite
     &:hover
       animation-play-state: paused
@@ -638,7 +662,6 @@ body
 .hidden
   opacity: 0 !important
   transform: scale(1) !important
-
 
 
 @keyframes spin
