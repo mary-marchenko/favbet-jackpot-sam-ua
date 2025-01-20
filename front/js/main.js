@@ -74,8 +74,6 @@
 
     function init() {
         if (window.store) {
-            var state = window.store.getState();
-            userId = state.auth.isAuthorized && state.auth.id || '';
             InitPage();
         } else {
             InitPage();
@@ -83,7 +81,6 @@
             var i = setInterval(function () {
                 if (c < 50) {
                     if (!!window.g_user_id) {
-                        userId = window.g_user_id;
                         InitPage();
                         clearInterval(i);
                     }
