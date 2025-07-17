@@ -4,7 +4,9 @@
     const ukLeng = document.querySelector('#ukLeng'),
         enLeng = document.querySelector('#enLeng');
 
-    let locale = 'en';
+    // let locale = 'uk';
+    let locale = sessionStorage.getItem("locale") ?? "uk"
+
 
     if (ukLeng) locale = 'uk';
     if (enLeng) locale = 'en';
@@ -12,7 +14,7 @@
     let i18nData = {};
 
     function loadTranslations() {
-        return fetch(`${apiURL}/translates/${locale}`).then(res => res.json())
+        return fetch(`${apiURL}/new-translates/${locale}`).then(res => res.json())
             .then(json => {
                 i18nData = json;
                 translate();
@@ -158,5 +160,27 @@
     socket.onclose = () => {
         console.log('WebSocket connection closed');
     };
+
+    // TEST
+
+    document.addEventListener("DOMContentLoaded", () => {
+        document.querySelector(".menu-btn")?.addEventListener("click", () => {
+            document.querySelector(".menu-test")?.classList.toggle("hide");
+        });
+    });
+
+    document.querySelector('.dark-btn').addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+    });
+
+    const lngBtn = document.querySelector(".lng-btn")
+    lngBtn.addEventListener("click", () => {
+        if (sessionStorage.getItem("locale")) {
+            sessionStorage.removeItem("locale");
+        } else {
+            sessionStorage.setItem("locale", "en");
+        }
+        window.location.reload();
+    });
 
 })();

@@ -23,6 +23,32 @@ $font-suisse-bold: SuisseIntl-Bold, sans-serif
 $font-gawaa: Gawaa-Italic, sans-serif
 $font-suisse-reg: SuisseIntl-Regular, sans-serif
 
+//test
+.menu-btn
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 20
+  width: fit-content
+  background: white
+  padding: 3px
+
+.menu-test
+  position: fixed
+  left: 0
+  top: 25px
+  z-index: 20
+  display: flex
+  gap: 2px
+  flex-direction: column
+  & > button
+    width: fit-content
+    background: white
+    color: black
+    padding: 2px
+    font-family: inherit
+    border-radius: 2px
+
 body
   &.dark
     --promo-bg-color: #111218
@@ -76,6 +102,7 @@ body
   display: flex
   flex-direction: column
   background: url("https://fav-prom.com/html/jackpot/img/big-bg.svg") no-repeat 50% 0/cover
+  background-size: auto 3360px
 
 .custom-btn
   width: 240px
@@ -628,6 +655,7 @@ body
   &__image
     margin: 0 0 -190px
     position: relative
+    pointer-events: none
     &::before
       content: ''
       position: absolute
@@ -640,6 +668,88 @@ body
     img
       position: relative
       z-index: 12
+  &__drop
+    max-width: 800px
+    width: 100%
+    margin: 0 auto 50px
+    border-radius: 10px
+    position: relative
+    z-index: 5
+    & > *
+      font-family: inherit
+      color: var(--promo-color-white)
+    .dropdown[open] summary::before
+      transform:  rotate(180deg)
+    summary
+      list-style: none
+      padding: 12px
+      border-radius: 12px
+      font-family: $font-suisse-reg
+      font-size: 16px
+      cursor: pointer
+      border: 2px solid var(--promo-color-blue)
+      box-shadow: 0px 0px 10px rgba(0, 198, 255, 0.62), 0px 0px 20px rgba(0, 198, 255, 0.62), 0px 0px 1px rgba(0, 198, 255, 0.62), 0px 0px 20px rgba(0, 198, 255, 0.62), 0px 0px 11px #00C6FF
+      background: rgba(0, 0, 0, 0.50)
+      display: flex
+      align-items: center
+      justify-content: space-between
+      color: var(--promo-color-white)
+      user-select: none
+      @media screen and (max-width: 600px)
+        font-size: 14px
+        line-height: 22px
+      &::before
+        content: ""
+        display: block
+        min-width: 25px
+        height: 25px
+        background: url("../img/arrow.png") no-repeat 0 0/contain
+        order: 2
+    summary::-webkit-details-marker
+      display: none
+    > summary
+      list-style: none
+    &-txt
+      padding: 15px
+      background: rgba(0, 0, 0, 0.50)
+      margin-top: 20px
+      border-radius: 10px
+      max-height: 350px
+      overflow-y: auto
+      border: 4px solid var(--promo-color-purple)
+      scrollbar-width: auto
+      cursor: auto
+      &::-webkit-scrollbar-thumb
+        background-color: var(--promo-color-blue)
+        width: 3px
+        border-radius: 5px
+      &::-webkit-scrollbar
+        background: var(--promo-bg-color)
+        width: 3px
+      .center
+        text-align: center
+        margin: 0 auto
+      &-list
+        display: flex
+        flex-direction: column
+        gap: 15px
+        *, p, strong
+          font-size: 16px
+          line-height: 26px
+          font-family: $font-suisse-reg
+          color: var(--promo-color-white)
+          @media screen and (max-width: 600px)
+            font-size: 14px
+            line-height: 22px
+        span
+          font-family: $font-suisse-reg
+          display: block
+        tr,td
+          font-family: $font-suisse-reg
+          color: var(--promo-color-white)
+          width: 50%
+        td
+          padding-left: 5px
   &__text
     font-family: $font-suisse-reg
     margin: 0 auto
@@ -647,16 +757,32 @@ body
     font-size: 12px
     line-height: 14px
     text-shadow: var(--promo-shadow-gray-text)
-    color: var(--promo-color-gray)
+    color: var(--promo-color-white)
     text-align: center
     position: relative
     z-index: 12
     a
       font-family: $font-suisse-reg
-      color: var(--promo-color-gray)
+      color: var(--promo-color-white)
       text-decoration: underline
       &:hover
         text-decoration: none
+
+.retreat1
+  //padding-left: 30px
+  strong
+    font-family: $font-suisse-bold
+    color: var(--promo-color-white)
+.circle
+  padding-left: 35px
+  &:before
+    content: ''
+    width: 5px
+    height: 5px
+    background: var(--promo-color-white)
+    border-radius: 50%
+    display: inline-block
+    margin: 0 4px 2px 0
 
 
 .hidden
